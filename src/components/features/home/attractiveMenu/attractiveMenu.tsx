@@ -2,10 +2,10 @@ import { Card, CardBody } from '@nextui-org/card'
 import { useState } from 'react'
 import Image from 'next/image'
 
-import AttractiveMenuData from 'coffee/data/attractive-menu'
+import attractiveMenu from 'coffee/data/attractive-menu'
 
 export default function AttractiveMenu() {
-    const [AttractiveMenu] = useState(AttractiveMenuData)
+    const [AttractiveMenu] = useState(attractiveMenu)
 
     return (
         <section className="bg-light-gray p-14 w-full">

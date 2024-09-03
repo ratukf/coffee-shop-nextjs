@@ -2,7 +2,7 @@ import React from 'react';
 
 import ProductImage from 'coffee/components/features/Product/components/ProductImage';
 import ProductInfo from 'coffee/components/features/Product/components/ProductInfo';
-import ProductButton from 'coffee/components/features/Product/components/ProductButton';
+import ButtonAddToCart from 'coffee/components/common/ButtonAddToCart'; 
 import MenusTypes from 'coffee/data/MenuTypes';
 
 interface MenuCardProps {
@@ -18,7 +18,8 @@ const ProductCard: React.FC<MenuCardProps> = ({ menu }) => {
                 description={menu.description} 
                 price={menu.price} 
             />
-            <ProductButton />
+            {/* Pastikan prop `menu` dikirim sebagai `product` */}
+            <ButtonAddToCart product={menu} />
         </div>
     );
 };

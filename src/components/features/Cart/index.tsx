@@ -1,7 +1,7 @@
-export default function CartPage() {
-    return(
-        <>
-            <h1>Cart</h1>
-        </>
+import Cart from 'coffee/components/features/Cart/page';
+
+export default function CarPage() {
+    return (
+        <Cart />
     )
 }

@@ -2,14 +2,17 @@ import React from 'react';
 import { useAtom } from 'jotai';
 import Link from 'next/link';
 import { loggedInUserAtom } from 'coffee/store/AuthAtom';
+import { useRouter } from 'next/router';
 
 const UserSection: React.FC = () => {
     const [loggedInUser, setLoggedInUser] = useAtom(loggedInUserAtom);
+    const router = useRouter();
 
     const handleLogOut = () => {
         setLoggedInUser(null);
         localStorage.removeItem('loggedInUser');
         alert('Logged out successfully')
+        router.push('/')
     }
 
     return (
