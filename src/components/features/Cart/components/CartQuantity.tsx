@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAtom } from 'jotai';
 
-import { updateQuantityAtom } from 'coffee/store/CartAtom';
+import { updateQuantityAtom, removeFromCartAtom } from 'coffee/store/CartAtom';
 import MenuTypes from 'coffee/data/MenuTypes';
 
 interface CartQuantityProps {
@@ -10,12 +10,18 @@ interface CartQuantityProps {
 
 export default function CartQuantity({ item }: CartQuantityProps) {
     const [, updateQuantity] = useAtom(updateQuantityAtom);
+    const [, removeFromCart] = useAtom(removeFromCartAtom);
 
     const handleIncrement = () => {
         updateQuantity({ itemTitle: item.title, quantity: item.quantity + 1 });
     };
 
-    const handleDecrement = () => {
+const handleDecrement = () => {
+        if (item.quantity === 1) {
+            removeFromCart(item.title);
+            return; 
+        }
+
         if (item.quantity > 1) {
             updateQuantity({ itemTitle: item.title, quantity: item.quantity - 1 });
         }
