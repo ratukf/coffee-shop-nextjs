@@ -1,5 +1,5 @@
 import React from 'react';
-import UserDataType from 'coffee/pages/auth/type/UserDataType'
+import UserDataType from 'coffee/utils/UserDataType'
 
 const UserData: UserDataType[] = [
     {
