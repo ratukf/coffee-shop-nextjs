@@ -1,15 +1,13 @@
 import React from 'react';
 // import { CartItem as CartItemType } from 'coffee/store/CartAtom'; // Import type jika ada
-import Image from 'next/image'; // Assuming you use Next.js and want to include images
+import Image from 'next/image';
+
+import MenuTypes from 'coffee/data/MenuTypes';
+import CartQuantity from 'coffee/components/features/Cart/components/CartQuantity';
 
 // Karena tidak ada typescript yang mendefinisikan, maka definisikan type disini
 interface CartItemProps {
-    item: {
-        url: string;
-        title: string;
-        price: number;
-        quantity: number;
-    };
+    item: MenuTypes & { quantity: number };
 }
 
 const CartItem: React.FC<CartItemProps> = ({ item }) => {
@@ -23,7 +21,7 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
             </td>
             <td className="px-6 py-4">{title}</td>
             <td className="px-6 py-4">{price.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</td>
-            <td className="px-6 py-4">{quantity}</td>
+            <td className="px-6 py-4"><CartQuantity item={item}/></td>
             <td className="px-6 py-4">{total.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</td>
         </tr>
     );

@@ -2,6 +2,8 @@ import { useAtom } from 'jotai';
 
 import { cartAtom } from 'coffee/store/CartAtom';
 import CartItem from 'coffee/components/features/Cart/components/CartItem';
+import CartTotal from 'coffee/components/features/Cart/components/CartTotal';
+import CartQuantity from 'coffee/components/features/Cart/components/CartQuantity';
 
 export default function CartTable() {
     const [cart] = useAtom(cartAtom);
@@ -22,6 +24,9 @@ export default function CartTable() {
                     <CartItem key={item.title} item={item} />
                 )}
             </tbody>
+            <tfoot>
+                <CartTotal />
+            </tfoot>
         </table>
     )
 }
