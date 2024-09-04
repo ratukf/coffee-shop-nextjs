@@ -6,6 +6,8 @@ interface OptionProps extends InputHTMLAttributes<HTMLInputElement> {
     name: string;
     value: string;
     id: string;
+    onClick: () => void;
+    isActive: boolean;
 }
 
 export default function OptionButton({ children, name, value, id, ...rest }: OptionProps) {

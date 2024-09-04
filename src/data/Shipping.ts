@@ -9,4 +9,11 @@ const Shipping = [
         price: 15000,
         time: 30
     },
+    {
+        name: 'pickup',
+        price: 0,
+        time: 0
+    }
 ];
+
+export default Shipping;

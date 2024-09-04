@@ -1,13 +1,27 @@
 import React from 'react';
+import { useAtom } from 'jotai';
 
+import { selectedShippingServiceAtom } from 'coffee/store/ShippingServiceAtom';
 import OptionButton from 'coffee/components/common/OptionButton';
 
 export default function ShippingService() {
-    return (
-        <div className="flex flex-col space-y-4">
-            <h2 className="text-lg font-semibold mt-4">Shipping Service</h2>
+    const [selectedShippingService, setSelectedShippingService] = useAtom(selectedShippingServiceAtom);
+
+    const handleSelectShipping = (value: string) => {
+        setSelectedShippingService(value);
+    };
+
+        return (
+        <div className="flex flex-col space-y-4 my-4">
+            <h2 className="text-lg font-semibold">Shipping Service</h2>
             <div className="flex space-x-4">
-                <OptionButton name="shipping" value="standard" id="standard-delivery">
+                <OptionButton
+                    name="shipping"
+                    value="standard"
+                    id="standard-delivery"
+                    onClick={() => handleSelectShipping("KoJek")}
+                    isActive={selectedShippingService === "KoJek"}
+                >
                     <div>
                         <div className="font-medium">KoJek</div>
                         <div>10000</div>
@@ -15,7 +29,13 @@ export default function ShippingService() {
                     </div>
                 </OptionButton>
 
-                <OptionButton name="shipping" value="express" id="express-delivery">
+                <OptionButton
+                    name="shipping"
+                    value="express"
+                    id="express-delivery"
+                    onClick={() => handleSelectShipping("Krab")}
+                    isActive={selectedShippingService === "Krab"}
+                >
                     <div>
                         <div className="font-medium">Krab</div>
                         <div>15000</div>
@@ -23,7 +43,13 @@ export default function ShippingService() {
                     </div>
                 </OptionButton>
 
-                <OptionButton name="shipping" value="pickup" id="store-pickup">
+                <OptionButton
+                    name="shipping"
+                    value="pickup"
+                    id="store-pickup"
+                    onClick={() => handleSelectShipping("pickup")}
+                    isActive={selectedShippingService === "pickup"}
+                >
                     <div>
                         <div className="font-medium">Store Pickup</div>
                         <div>Free</div>
@@ -32,6 +58,6 @@ export default function ShippingService() {
                 </OptionButton>
             </div>
         </div>
+        )
 
-    )
 }
