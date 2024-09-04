@@ -12,6 +12,8 @@ export default function CartCheckout() {
             alert('Your cart is empty')
             return;
         }
+        console.log("cart length: ",cart.length)
+        router.push('/ordersummary');
     }
 
     return (

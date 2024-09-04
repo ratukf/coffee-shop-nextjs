@@ -25,7 +25,7 @@ export default function AttractiveMenu() {
                                 src={`/images/${item.url}`}
                                 alt={`${item.title}`}
                                 fill
-                                objectFit="contain"
+                                style={{ objectFit: 'contain' }}
                                 className="rounded-t-lg"
                                 priority
                                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"

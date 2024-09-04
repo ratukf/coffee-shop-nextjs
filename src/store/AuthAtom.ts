@@ -1,6 +1,6 @@
 import { atom } from 'jotai';
-import UserData from 'coffee/utils/UserData';
-import UserDataType from 'coffee/utils/UserDataType';
+import UserData from 'coffee/data/UserData';
+import UserDataType from 'coffee/data/UserDataType';
 
 // Atom untuk menyimpan status user yang sudah login
 export const loggedInUserAtom = atom<UserDataType | null>(null);

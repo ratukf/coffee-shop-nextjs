@@ -1,6 +1,6 @@
 import Cart from 'coffee/components/features/Cart/page';
 
-export default function CarPage() {
+export default function CartPage() {
     return (
         <Cart />
     )
