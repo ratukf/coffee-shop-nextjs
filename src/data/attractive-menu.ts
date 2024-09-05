@@ -1,7 +1,7 @@
 const attractiveMenu = [
     {
         url: 'menu-cappucino.png',
-        title: 'Sunday Cappucino',
+        title: 'Sunday Cappuccino',
         description: '',
         price: 35000,
     },
