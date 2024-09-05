@@ -21,8 +21,8 @@ export default function CheckoutButton() {
             return;
         }
 
-        router.push('/orderSuccedd')
-
+        router.push('/orderSucceed')
+        
     }
 
     return (

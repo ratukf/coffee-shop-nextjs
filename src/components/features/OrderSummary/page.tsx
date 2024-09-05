@@ -4,7 +4,7 @@ import OrderSummaryComponent from 'coffee/components/features/OrderSummary/compo
 
 export default function OrderSummaryPage() {
     return (
-        <section className="border-t-2 border-calm-brown p-8 flex flex-wrap w-full gap-10">
+        <section className="border-t-2 border-calm-brown p-8 flex flex-wrap gap-10 ">
             <Card title="Checkout Information">
                 <CheckOutInformation />
             </Card>

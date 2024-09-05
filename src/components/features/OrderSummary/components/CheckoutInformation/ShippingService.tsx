@@ -14,7 +14,7 @@ export default function ShippingService() {
         return (
         <div className="flex flex-col space-y-4 my-4">
             <h2 className="text-lg font-semibold">Shipping Service</h2>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 flex-wrap">
                 <OptionButton
                     name="shipping"
                     value="standard"
@@ -25,7 +25,7 @@ export default function ShippingService() {
                     <div>
                         <div className="font-medium">KoJek</div>
                         <div>10000</div>
-                        <div className="text-sm text-gray-500">Estimated 1 hour delivery</div>
+                        <div className="text-sm text-gray-500">Estimated 45 minutes delivery</div>
                     </div>
                 </OptionButton>
 
@@ -39,7 +39,7 @@ export default function ShippingService() {
                     <div>
                         <div className="font-medium">Krab</div>
                         <div>15000</div>
-                        <div className="text-sm text-gray-500">Estimated 3 minutes delivery</div>
+                        <div className="text-sm text-gray-500">Estimated 30 minutes delivery</div>
                     </div>
                 </OptionButton>
 
@@ -53,7 +53,7 @@ export default function ShippingService() {
                     <div>
                         <div className="font-medium">Store Pickup</div>
                         <div>Free</div>
-                        <div className="text-sm text-gray-500">Pickup your purchase today</div>
+                        <div className="text-sm text-gray-500">Pickup your purchase today to our store</div>
                     </div>
                 </OptionButton>
             </div>
