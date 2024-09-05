@@ -7,7 +7,7 @@ import attractiveMenu from 'coffee/data/attractive-menu';
 import MenusTypes from 'coffee/data/MenuTypes';
 
 interface MenuCardProps {
-    menu: MenusTypes;
+    menu: MenusTypes[];
 }
 
 const AttractiveMenu: React.FC<MenuCardProps> = ({ menu }) => {
