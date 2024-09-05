@@ -27,6 +27,11 @@ const UserData: UserDataType[] = [
       email: 'didi@example.com',
       password: '123456',
     },
+    {
+      name: '',
+      email: '',
+      password: '',
+    }
   ];
   
 export default UserData;  
