@@ -17,19 +17,28 @@ export default function OrderSucceed() {
         const payment = () => {
             if (selectedPaymentMethod === 'card') {
                 setPaymentMessage('Please pay to our virtual account: 417841678420')
-            } else if (selectedPaymentMethod === 'google-wallet') {
+                return;
+            }
+            if (selectedPaymentMethod === 'google-wallet') {
                 setPaymentMessage('Tap your device to card reader after delivery arrived')
-            } else if (selectedPaymentMethod === 'cash') {
+                return;
+            }
+            
+            if (selectedPaymentMethod === 'cash') {
                 setPaymentMessage('Please prepare the exact cash')
             }
         }
     
         const deliveryTime = () => {
-            if (selectedShippingService === 'Pickup') {
+            if (selectedShippingService === 'pickup') {
                 setTimeMessage('Please pick up your delivery from our store')
-            } else if (selectedShippingService === 'KoJek') {
+                return;
+            }
+            if (selectedShippingService === 'KoJek') {
                 setTimeMessage('Your delivery will arrive in 45 minutes')
-            } else if (selectedShippingService === 'Krab') {
+                return;
+            }
+            if (selectedShippingService === 'Krab') {
                 setTimeMessage('Your delivery will arrive in 30 minutes')
             }
         }
