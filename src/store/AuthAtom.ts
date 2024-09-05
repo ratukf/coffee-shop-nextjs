@@ -2,6 +2,8 @@ import { atom } from 'jotai';
 import UserData from 'coffee/data/UserData';
 import UserDataType from 'coffee/data/UserDataType';
 
+import { cartAtom } from 'coffee/store/CartAtom';
+
 // Atom untuk menyimpan status user yang sudah login
 export const loggedInUserAtom = atom<UserDataType | null>(null);
 
@@ -20,3 +22,10 @@ export const authenticateUser = (email: string, password: string): UserDataType 
   return user || null;
 };
 
+export const logoutUser = (
+  setLoggedInUser: React.Dispatch<React.SetStateAction<UserDataType | null>>,
+  setCart: React.Dispatch<React.SetStateAction<any[]>> // Use any[] or the correct type for your cart items
+) => {
+  setLoggedInUser(null);
+  setCart([]); // Clear the cart
+};

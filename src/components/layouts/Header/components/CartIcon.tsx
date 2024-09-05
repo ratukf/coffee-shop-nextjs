@@ -24,15 +24,15 @@ const CartIcon: React.FC = () => {
     const totalQuantity = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
 
     return (
-        <li>
+        <div className="flex items-center">
             <FaCartShopping
                 onClick={cartHandle}
-                className='text-2xl mx-4 cursor-pointer text-calm-brown hover:scale-150 hover:text-calm-black duration-200'
+                className='text-3xl mx-4 cursor-pointer text-calm-black hover:scale-150 duration-200'
             />
             {totalQuantity > 0 && (
-                <span className="font-bold ml-2 text-sm bg-red-500 text-white rounded-full px-2 py-1">{totalQuantity}</span>
+                <span className=" font-bold -ml-5 -mt-5 text-sm bg-red-500 text-white rounded-full px-2 py-1">{totalQuantity}</span>
             )}
-        </li>
+        </div>
     );
 };
 

@@ -7,10 +7,10 @@ export default function Discount() {
     return (
         <>
             <section
-                className="p-10 flex gap-10"
+                className="w-full flex flex-col lg:flex-row justify-between p-8 lg:p-10 gap-6 lg:gap-10"
                 style={{ backgroundImage: `url('images/home-indonesia.png')` }}
             >
-                <div>
+                <div className="flex-1">
                     <h1
                         className="text-6xl font-black"
                         style={{
@@ -28,7 +28,7 @@ export default function Discount() {
                     </h3>
                     <p>*selama persediaan masih ada</p>
                 </div>
-                <div>
+                <div className="flex-1 flex flex-col items-center">
                     <Image
                         src={imageCoffee}
                         alt="Coffee Mocha"

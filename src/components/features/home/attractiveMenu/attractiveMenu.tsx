@@ -8,7 +8,7 @@ export default function AttractiveMenu() {
     const [AttractiveMenu] = useState(attractiveMenu)
 
     return (
-        <section className="bg-light-gray p-14 w-full">
+        <section className="bg-light-gray py-14 px-8 w-full">
             <div className="mb-5">
                 <h1 className="font-black text-calm-black text-6xl text-center">
                     Our Attractive
@@ -19,7 +19,7 @@ export default function AttractiveMenu() {
             </div>
             <div className="md:flex gap-10">
                 {AttractiveMenu.map((item, index) => (
-                    <Card key={index} className="md:flex-grow p-3">
+                    <Card key={index} className="md:flex-grow p-3 m-5">
                         <div className="relative w-full h-60">
                             <Image
                                 src={`/images/${item.url}`}

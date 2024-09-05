@@ -2,18 +2,32 @@ import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useAtom } from 'jotai';
 
 import NavLinks from 'coffee/components/layouts/Header/components/NavLinks';
 import MobileNav from 'coffee/components/layouts/Header/components/MobileNav';
-import UserSection from 'coffee/components/layouts/Header/components/UserSection';
 import CartIcon from 'coffee/components/layouts/Header/components/CartIcon';
 import image from 'coffee/images/nav-coffee-monster.png';
 import Links from 'coffee/components/layouts/Header/const/Links';
+import { loggedInUserAtom, logoutUser } from 'coffee/store/AuthAtom';
+import { cartAtom } from 'coffee/store/CartAtom';
 
 const Navbar: React.FC = () => {
     const [nav, setNav] = useState(false);
+    const [isLoggedIn, setLoggedInUser] = useAtom(loggedInUserAtom);
+    const [cart, setCart] = useAtom(cartAtom);
+
+    const updatedLinks = Links.map(link =>
+        link.id === 4 ? { ...link, name: isLoggedIn ? 'Logout' : 'Login'} : link
+    );
+
+    const handleLogout = () => {
+        logoutUser(setLoggedInUser, setCart);
+        alert('You have been logged out');
+    };
+
     return (
-        <div className="p-14 navbar-wrapper flex justify-between items-center w-full h-20 text-[#242424] bg-white nav z-50">
+        <div className="py-14 px-8 navbar-wrapper flex justify-between items-center w-full h-20 text-[#242424] bg-white nav z-50">
             <div>
                 <h1>
                     <Link
@@ -33,7 +47,7 @@ const Navbar: React.FC = () => {
             </div>
 
             <ul className="hidden md:flex">
-                <NavLinks links={Links} />
+                <NavLinks links={updatedLinks} onLogout={handleLogout} />
                 <CartIcon />
             </ul>
 
@@ -44,11 +58,7 @@ const Navbar: React.FC = () => {
                 {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
             </div>
 
-            <MobileNav links={Links} nav={nav} setNav={setNav} />
-
-            <div>
-                <UserSection />
-            </div>
+            <MobileNav links={updatedLinks} nav={nav} setNav={setNav} onLogout={handleLogout} />
         </div>
     );
 };

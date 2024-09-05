@@ -61,7 +61,7 @@ const Menu:MenusTypes = [
         title: 'Mocha',
         description:
             'Espresso yang dicampur dengan cokelat, susu panas, dan buih susu. Rasa manis dan kaya akan cokelat',
-        price: 35000,
+        price: 25000,
         reviewer1: 'Sinta',
         review1: 'Wenaaaaa pol, recommended banget sumpilll',
         reviewer2: 'Dinda',
