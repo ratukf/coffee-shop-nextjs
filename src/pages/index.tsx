@@ -5,6 +5,7 @@ import ImageSlider from 'coffee/components/features/home/imageSlider/ImageSlider
 import Story from 'coffee/components/features/home/story/Story'
 import AttractiveMenu from 'coffee/components/features/home/attractiveMenu/attractiveMenu'
 import Discount from 'coffee/components/features/home/discount/discount'
+import menu from 'coffee/data/Menu' // import data menu yang diperlukan
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +16,7 @@ export default function Home() {
         >
             <ImageSlider />
             <Story />
-            <AttractiveMenu />
+            <AttractiveMenu /> {/* Menyediakan prop menu */}
             <Discount />
         </main>
     )
