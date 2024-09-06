@@ -14,7 +14,7 @@ export default function ShippingService() {
         return (
         <div className="flex flex-col space-y-4 my-4">
             <h2 className="text-lg font-semibold">Shipping Service</h2>
-            <div className="flex space-x-4 flex-wrap">
+            <div className="flex flex-wrap gap-5">
                 <OptionButton
                     name="shipping"
                     value="standard"

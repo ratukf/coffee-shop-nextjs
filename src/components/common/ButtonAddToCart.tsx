@@ -70,7 +70,7 @@ export default function ButtonAddToCart({ product }: ButtonAddToCartProps) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }} // Animation duration for checkmark
-                    className="absolute top-0 left-0 w-full h-full flex items-center justify-center"
+                    className="w-full h-full flex items-center justify-center"
                 >
                     <Image src={successImage} alt="Success" height={50} width={50} />
                 </motion.div>

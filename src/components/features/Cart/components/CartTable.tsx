@@ -9,28 +9,29 @@ export default function CartTable() {
     const [cart] = useAtom(cartAtom);
 
     return (
-        <section className="flex justify-center items-center">
-            <table className="table-auto">
-                <thead>
-                    <tr className="border-b-2 border-calm-brown">
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Product</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Quantity</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total</th>
-                    </tr>
-                </thead>
-                <tbody className="border-b-2 border-calm-brown">
-                    {cart.map(item =>
-                        <CartItem key={item.title} item={item} />
-                    )}
-                </tbody>
-                <tfoot>
-                    <CartTotal />
-                    <CartCheckout />
-                </tfoot>
-            </table>
-
+        <section className="flex justify-center items-center p-5">
+            <div className="w-full overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
+                <table className="table-auto min-w-full">
+                    <thead>
+                        <tr className="border-b-2 border-calm-brown">
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Product</th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Quantity</th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody className="border-b-2 border-calm-brown">
+                        {cart.map(item =>
+                            <CartItem key={item.title} item={item} />
+                        )}
+                    </tbody>
+                    <tfoot>
+                        <CartTotal />
+                        <CartCheckout />
+                    </tfoot>
+                </table>
+            </div>
         </section>
     )
 }

@@ -9,7 +9,7 @@ const MobileNav: React.FC<{
     nav: boolean;
     setNav: React.Dispatch<React.SetStateAction<boolean>>;
     onLogout: () => void; // Add this line
-    }> = ({ links, nav, setNav, onLogout }) => {
+}> = ({ links, nav, setNav, onLogout }) => {
     return (
         nav && (
             <ul className="flex flex-col justify-center items-center fixed top-0 left-0 w-full h-screen bg-calm-brown text-white z-20">
@@ -27,7 +27,9 @@ const MobileNav: React.FC<{
                             key={id}
                             className="px-4 cursor-pointer capitalize py-6 text-4xl font-bold"
                         >
-                            <CartIcon />
+                            <div onClick={() => setNav(false)}>
+                                <CartIcon />
+                            </div>
                         </li>
                     ) : (
                         <li

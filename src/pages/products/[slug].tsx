@@ -32,7 +32,7 @@ const ProductDetail = () => {
     if (!product) return <p>Product not found</p>;
 
     return (
-        <section className="flex flex-col lg:flex-row w-full lg:p-20 sm:p-12 border-2">
+        <section className="flex flex-col lg:flex-row w-full lg:p-20 p-12 border-2">
             <div className="flex-1 flex justify-center mb-4 lg:mb-0 lg:w-1/2">
                 <Image
                     src={`/images/${product.url}`}
