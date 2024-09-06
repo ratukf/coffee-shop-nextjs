@@ -19,7 +19,7 @@ const story: HomeData[] = [
 
 export default function Story() {
     return (
-        <section className="w-full p-8 sm:pl-8 md:pl-14 bg-gray-100">
+        <section className="w-full p-8 sm:pl-8 md:pl-14 bg-white">
             {story.map((data, index) => (
                 <div
                     key={index}
