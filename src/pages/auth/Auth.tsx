@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
-import { useAtom } from 'jotai';
-import { useRouter } from 'next/router';
+import React, { useState } from "react";
+import { useAtom } from "jotai";
+import { useRouter } from "next/router";
 
-import { authenticateUser, loggedInUserAtom, authErrorAtom } from 'coffee/store/AuthAtom';
+import {
+  authenticateUser,
+  loggedInUserAtom,
+  authErrorAtom,
+} from "coffee/store/AuthAtom";
 
 const Auth = () => {
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
   const [, setLoggedInUser] = useAtom(loggedInUserAtom);
   const [error, setError] = useAtom(authErrorAtom);
 
@@ -14,19 +18,18 @@ const Auth = () => {
 
   const handleLogin = () => {
     const user = authenticateUser(email, password);
-    
+
     if (user) {
       // Jika user ditemukan, simpan data user ke dalam atom Jotai
       setLoggedInUser(user);
-      setError('');
+      setError("");
       alert(`Welcome ${user.name}!`);
       // Misalnya, redirect ke halaman lain atau lakukan tindakan setelah login
-      router.push('/products')
+      router.push("/products");
       console.log("Logged in user: ", user.name);
-
     } else {
       // Jika user tidak ditemukan, update error state di atom Jotai
-      setError('Invalid email or password');
+      setError("Invalid email or password");
     }
   };
 
@@ -35,6 +38,10 @@ const Auth = () => {
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <h2 className="text-2xl font-semibold text-calm-black mb-4">Login</h2>
         {error && <p className="text-red-500 mb-4">{error}</p>}
+        <h6 className="font-thin text-red py-4">
+          Use <span className="font-bold">x@example.com</span> with{" "}
+          <span className="font-bold">12345</span> as the password
+        </h6>
         <div className="mb-4">
           <label className="block text-calm-black mb-2">Email</label>
           <input
