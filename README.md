@@ -1,67 +1,30 @@
-# Coffee Monster ☕
+# Coffee Shop Web
 
-Front-End Coffee Shop Web Application
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f9d18667-de0a-4307-86d9-cbd024dee681" />
+</p>
 
-Coffee Monster is a front-end web application that simulates a coffee shop experience, focusing on product browsing, cart management, and checkout flow logic without real backend integration.
+A frontend web application that simulates a coffee shop experience, focusing on product browsing, cart management, and checkout flow logic without real backend integration with best practice on front-end architecture, state management, and user interaction handling in an e-commerce-like scenario.
 
-This project is built to demonstrate front-end architecture, state management, and user interaction handling in an e-commerce-like scenario.
-
----
-
-## 🌐 Live Demo
-
-https://coffee-shop-nextjs-2.vercel.app/
-
----
-
-## 🛠 Tech Stack
+## Tech Stack
 
 - Next.js
 - TypeScript
 - Tailwind CSS
-- Jotai (State Management)
-- NextUI (UI Components)
+- Jotai
+- NextUI
 
----
+## Features
 
-## ✨ Features
-
-- Dummy authentication using hardcoded email & password
+- Authentication by email & password
 - Product list and product detail pages
-- Add products to cart
-- Update product quantity in cart
-- Checkout flow including:
-  - Shipping option selection
-  - Payment method selection
+- Cart page
+- Update product's quantity in cart
+- Checkout flow including selecting shipping option & payment method
 - Automatic total price calculation
 - Responsive layout for desktop and mobile
 
----
-
-## ⚠️ Important Notes
-
-- Authentication is simulated (no real user data)
-- Payment and checkout process are fully mocked
-- No backend or database integration
-
-This project focuses purely on front-end logic and UI behavior.
-
----
-
-## 📄 Pages
-
-- Home
-- Product List
-- Product Detail
-- Mini Cart
-- Cart
-- Checkout
-- Success
-- Login
-
----
-
-## 📦 Getting Started
+## Run The Project
 
 Clone the repository:
 
@@ -87,15 +50,6 @@ Open in browser:
 http://localhost:3000
 ```
 
-## 🎯 Purpose
+## License
 
-This project was created for portfolio purposes to demonstrate:
-
-- Front-end development using Next.js and TypeScript
-- State management with Jotai
-- E-commerce-style user flow implementation
-- Clean and responsive UI with Tailwind CSS
-
-## 📜 License
-
-This project is intended for learning and portfolio use only.
+MIT
