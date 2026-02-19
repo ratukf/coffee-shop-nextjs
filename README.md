@@ -29,7 +29,7 @@ A frontend web application that simulates a coffee shop experience, focusing on 
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ratukf/coffee-shop-nextjs
 ```
 
 Install dependencies:
