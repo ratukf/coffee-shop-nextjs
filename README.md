@@ -1,7 +1,19 @@
 # Coffee Shop Web
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/f9d18667-de0a-4307-86d9-cbd024dee681" />
+<img width="1920" height="1190" alt="screencapture-coffee-shop-nextjs-2-vercel-app-2026-02-19-18_34_01" src="https://github.com/user-attachments/assets/d728f819-2983-4968-bab6-95d5d4decb5f" />
+
+</p>
+<p align="center">
+  <img width="1920" height="1255" alt="screencapture-coffee-shop-nextjs-2-vercel-app-products-2026-02-19-18_35_11" src="https://github.com/user-attachments/assets/da3350a3-e77a-410d-9ca8-a8f116f5b2e4" />
+</p>
+
+<p align="center">
+  <img width="1896" height="637" alt="image" src="https://github.com/user-attachments/assets/e3d6dd59-c598-49b4-9d93-b2f9ea320934" />
+</p>
+
+<p align="center">
+  <img width="1589" height="899" alt="image" src="https://github.com/user-attachments/assets/ad12568a-ecae-454b-8f44-3c231549f0cc" />
 </p>
 
 A frontend web application that simulates a coffee shop experience, focusing on product browsing, cart management, and checkout flow logic without real backend integration with best practice on front-end architecture, state management, and user interaction handling in an e-commerce-like scenario.
