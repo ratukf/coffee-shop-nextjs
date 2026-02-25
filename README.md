@@ -1,5 +1,11 @@
 # Coffee Shop Web
 
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+
 <p align="center">
 <img width="1920" height="1190" alt="screencapture-coffee-shop-nextjs-2-vercel-app-2026-02-19-18_34_01" src="https://github.com/user-attachments/assets/d728f819-2983-4968-bab6-95d5d4decb5f" />
 
